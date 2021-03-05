@@ -1,0 +1,2 @@
+# Parlor
+Parlor is a web application, which arises from the need of companies and executives who wish to search and reserve spaces within the hotel complexes. The functionality of the application is inspired by other hotel and lodging search platforms that we know today.  The application has a complex and robust communication between the backend and frontend. Allowing a correct and efficient handling of data and requests.  The project is developed with different languages such as HTML, CSS, JavaScript, NodeJs, SQL and React.
