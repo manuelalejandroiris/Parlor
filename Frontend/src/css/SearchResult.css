@@ -1,0 +1,125 @@
+.searchResult {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.section-results {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.section-results.res {
+    cursor: default;
+}
+
+.section-link {
+    color: black;
+    text-decoration: none;
+}
+
+.img-results:hover {
+    opacity: 0.8;
+}
+
+.img-results.res:hover {
+    transform: scale(1.1);
+}
+
+.img-results {
+    height: 10rem;
+    width: 16rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img-results.res {
+    cursor: pointer;
+}
+
+.button-book>button {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 2px;
+    background: linear-gradient(90deg,
+            rgb(170, 140, 70) 0%,
+            rgb(252, 223, 104) 100%);
+    outline: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.button-book>button:hover {
+    cursor: pointer;
+    background: linear-gradient(90deg,
+            rgb(200, 180, 100) 0%,
+            rgb(252, 223, 104) 100%);
+    transition: all 0.3s ease-out;
+}
+
+.searchResult__stars {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.searchResult__info {
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.fa-heart.result {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.fa-heart.result:hover {
+    color: red;
+}
+
+.fa-star.result{
+    padding-right: 0.5rem;
+}
+
+.fa-star.result:hover {
+    color: yellow;
+}
+
+.searchResult__infos {
+    width: 40vw;
+}
+
+.searchResult__infoTop>h3 {
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.searchResult__infoTop>p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: gray;
+}
+
+.searchResults__price {
+    position: absolute;
+    text-align: right;
+    bottom: 20px;
+    right: 30px;
+}

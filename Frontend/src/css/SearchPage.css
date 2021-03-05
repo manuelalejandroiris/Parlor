@@ -1,0 +1,68 @@
+.searchResult {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+    
+}
+
+.section-page {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.img-page {
+    height: 10rem;
+    width: 16rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.info-space {
+    display: flex;
+    flex-direction: row;
+}
+
+.fa-heart.page {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+}
+
+.fa-heart.page:hover {
+    color: red;
+}
+
+.fa-star.page {
+    padding-right: 0.5rem;
+}
+
+.fa-star.page:hover {
+    color: yellow;
+}
+
+.img-space {
+    display: flex;
+    flex-direction: row;
+}
+
+.book-space {
+    display: flex;
+    flex-direction: row;
+}
+
+.equip-space {
+    display: flex;
+    flex-direction: row;
+}
+
+.score-space {
+    display: flex;
+    flex-direction: row;
+}
