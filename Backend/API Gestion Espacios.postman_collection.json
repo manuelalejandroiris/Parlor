@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "896c9a8f-6ff0-4e8c-adef-658f209a9fcd",
+		"name": "API Gestion Espacios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hoteles",
+			"item": [
+				{
+					"name": "Listar Hoteles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/hoteles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"hoteles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Hoteles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/hoteles?search=Sevilla",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"hoteles"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Sevilla"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Muestra un Hotel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/hoteles/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"hoteles",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nuevo Hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Hotel Diamond\",\n    \"localidad\": \"Madrid\",\n    \"direccion\": \"Calle Colombia\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/hoteles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"hoteles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Hotel",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fechaRegistro\": \"2021-01-11T09:58:08.368Z\",\n    \"nombre\": \"Hotel Diamond\",\n    \"localidad\": \"Madrid\",\n    \"direccion\": \"Calle Sevilla\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/hoteles/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"hoteles",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Hotel",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/hoteles/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"hoteles",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Registro de usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"\",\n    \"apellidos\": \"\",\n    \"email\": \"luismi@gmail.com\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

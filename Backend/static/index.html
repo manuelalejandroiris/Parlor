@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Espacios</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hoteles</h1>
+    </header>
+
+    <form>
+        <fieldset>
+            <label for="nombre">Hotel</label>
+            <input type="text" name="nombre" id="nombre" />
+        </fieldset>
+        <fieldset>
+            <label for="direccion">Direccion</label>
+            <input type="text" name="direccion" id="direccion" />
+        </fieldset>
+        <fieldset>
+            <label for="">Localidad</label>
+            <input type="text" name="localidad" id="localidad" />
+        </fieldset>
+
+        <button>Enviar</button>
+    </form>
+
+    <ul>
+
+    </ul>
+
+    <script>
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const nombre = e.target.elements.nombre.value;
+            const direccion = e.target.elements.direccion.value;
+            const localidad = e.target.elements.localidad.value;
+
+            const body = {
+                nombre,
+                direccion,
+                localidad
+            };
+
+            const response = await fetch('/hoteles', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(body)
+            })
+
+            if (response.ok) {
+                location.reload();
+            }
+        });
+
+        async function main() {
+            const response = await fetch('/hoteles');
+            const json = await response.json();
+
+            const ul = document.querySelector('ul');
+
+            for (const item of json.data.reverse()) {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <h2>${item.nombre}</h2>
+                    <p>${item.direccion}</p>
+                    <p>${item.localidad}</p>
+                `;
+
+                ul.appendChild(li);
+            }
+        }
+
+        main();
+
+    </script>
+
+</body>
+
+</html>
